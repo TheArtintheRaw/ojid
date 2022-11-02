@@ -123,17 +123,12 @@ export type Guards = {
   goLiveDate?: Date;
   endTime?: Date;
   payment?: SplTokenAmount | SolAmount;
-  nftGate?: [
-    {
-      settings: NftGateGuardMintSettings;
-      mint: PublicKey;
-      tokenAccount?: PublicKey;
-    },
-    {
-      settings: NftGateGuardSettings;
-      requiredCollection?: PublicKey;
-    }
-  ];
+  nftGate?: {
+    settings: NftGateGuardMintSettings;
+    mint: PublicKey;
+    tokenAccount?: PublicKey;
+  };
+
   mintLimit?: {
     settings: MintLimitGuardSettings;
     pda?: Pda;

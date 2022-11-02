@@ -11,7 +11,6 @@ import {
   SolAmount,
   SplTokenAmount,
   TransactionBuilder,
-  groups,
   mintFromCandyMachineBuilder,
   walletAdapterIdentity,
 } from "@metaplex-foundation/js";

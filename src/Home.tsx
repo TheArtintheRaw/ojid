@@ -123,11 +123,6 @@ export type Guards = {
   goLiveDate?: Date;
   endTime?: Date;
   payment?: SplTokenAmount | SolAmount;
-  nftGate?: {
-    settings: NftGateGuardMintSettings;
-    mint: PublicKey;
-    tokenAccount?: PublicKey;
-  };
 
   mintLimit?: {
     settings: MintLimitGuardSettings;
@@ -162,7 +157,7 @@ const Home = (props: HomeProps) => {
   const [isPresale, setIsPresale] = useState(false);
   const [isWLOnly, setIsWLOnly] = useState(false);
   const [guards, setGuards] = useState<Guards>();
-  const [requiredCollection, setRequiredCollection] = useState<nftGate>();
+
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
